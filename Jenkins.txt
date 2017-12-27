@@ -1,0 +1,31 @@
+- Download war file
+- set java_home and path
+- java -jar jenkins.war
+-syntax MINUTE HOUR DOM MONTH DOW
+MINUTE	Minutes within the hour (0–59)
+HOUR	The hour of the day (0–23)
+DOM	The day of the month (1–31)
+MONTH	The month (1–12)
+DOW	The day of the week (0–7) where 0 and 7 are Sunday.
+
+To specify multiple values for one field, the following operators are available. In the order of precedence,
+
+* specifies all valid values
+M-N specifies a range of values
+M-N/X or */X steps by intervals of X through the specified range or whole valid range
+A,B,...,Z enumerates multiple values
+
+
+
+= every min,every 1 hr,every day at 12 midnight,every monday
+
+H/5 * * * * every 5 min
+0-59/2 * * * * every 2 mins
+0-59/1 * * * * every 1 min
+H/1 * * * * every 1 hr
+H * * * * every 1hr
+
+0-0 5 * * * every morning 5am
+0-0 * * * every 12 midnight
+0-0 5 * * 3 every wednesday morning 5 am
+0-0 H/6 * * * 
